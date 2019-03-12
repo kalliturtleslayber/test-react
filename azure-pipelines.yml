@@ -1,0 +1,16 @@
+# Xcode
+# Build, test, or archive an Xcode workspace on macOS. Optionally package an app2.
+
+- task: Xcode@5
+  inputs:
+    actions: 'build' 
+    configuration: '$(Configuration)' # Optional
+    sdk: 'iphoneos' # Optional
+    xcWorkspacePath: '/Users/vsts/agent/2.148.0/work/1/s/ios/customSmart2.xcworkspace' # Optional
+    scheme: '$(scheme)'
+    xcodeVersion: 'default' # Optional. Options: 8, 9, 10, default, specifyPath
+    packageApp: customSmart2
+    archivePath: customSmart2.xcarchive
+    signingOption: 'nosign' # Optional. Options: nosign, default, manual, auto
+    destinationPlatformOption: 'iOS' # Optional. Options: default, iOS, tvOS, macOS, custom
+    useXcpretty: true # Optional
