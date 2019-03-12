@@ -1,6 +1,16 @@
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+pool:
+  vmImage: 'macOS-10.13'
+
+variables:
+  scheme: ''
+  sdk: 'iphoneos'
+  configuration: 'Release'
+
 # Xcode
 # Build, test, or archive an Xcode workspace on macOS. Optionally package an app2.
 
+steps:
 - task: Xcode@5
   inputs:
     actions: 'build' 
