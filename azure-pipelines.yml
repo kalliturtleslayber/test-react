@@ -11,7 +11,7 @@ variables:
 # Build, test, or archive an Xcode workspace on macOS. Optionally package an app2.
 
 steps:
-- task: Xcode@5
+- task: Xcode
   inputs:
     actions: 'build' 
     configuration: '$(Configuration)' # Optional
